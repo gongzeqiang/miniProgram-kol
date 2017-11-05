@@ -1,0 +1,150 @@
+/**index.wxss**/
+.head{
+  height: 86rpx;
+  line-height: 82rpx;
+  padding-top: 4px;
+}
+.head-ls{
+  width: 50%;
+}
+.head-list{
+  padding: 0 28rpx;
+  width: 160rpx;
+  border-bottom: 4rpx solid transparent;
+  font-size: 28rpx;
+  margin: 0 auto;
+}
+.head-list-cur{
+  border-bottom-color: red;
+}
+.main-ls{
+  display: block;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.list-wrap{
+  margin-right: -10rpx;
+}
+.list-ls{  
+  width: 50%;
+  height: 470rpx;
+  overflow: hidden;
+  padding-right: 10rpx;
+  margin-bottom: 10rpx;
+  box-sizing: border-box;
+}
+.list-list{
+  position: relative;
+  height: 100%;
+}
+.list-list > image{
+  width: 100%;
+}
+.list-ls-bottom{
+  position: absolute;
+  padding: 0 9rpx 0 20rpx; 
+  width: 100%;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 25rpx;
+  color: #fff;
+}
+.list-lb-name{
+  line-height: 46rpx;
+  font-size: 26rpx;
+}
+.list-lb-line{
+  background: #fff;
+  margin-top: 24rpx;
+  width: 90rpx;
+  height: 2rpx;
+  margin-left: 10rpx;
+}
+.list-ls-tag{
+  line-height: 26rpx;
+  border: 2rpx solid #fff;
+  border-radius: 15rpx;
+  padding: 0 13rpx;
+  font-size: 24rpx;
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+}
+.icon-focus{
+  width: 24rpx;
+  height: 20rpx;
+  background: red;
+  margin-right: 6rpx;
+  margin-top: 3rpx;
+}
+.list-ls-audience-txt{
+  line-height: 26rpx;
+  font-size: 24rpx;
+  margin-right: 9rpx;
+}
+.icon-kolList{
+  width: 28rpx;
+  height: 28rpx;
+  background: red;
+  margin-right: 8rpx;
+  margin-top: 27rpx;
+}
+.icon-noticeList{
+  width: 35rpx;
+  height: 28rpx;
+  background: red;
+  margin-right: 7rpx;
+  margin-top: 27rpx;
+}
+.list-ls-num{
+  position: absolute;
+  bottom: 0;
+  right: 10rpx;
+  line-height: 38rpx;
+  border-radius: 19rpx;
+  padding: 0 10rpx;
+  font-size: 24rpx;
+  background: rgba(255, 255, 255, .5);
+}
+.notice-nav{
+  border-top: 2rpx solid #e6e6e6;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  display: flex;
+}
+.notice-nav-conditions{
+  flex: 1;
+}
+.notice-nav-btn{
+  width: 116rpx;
+  border-left: 2rpx solid #e6e6e6;
+}
+.icon-conditions-btn{
+  width: 20rpx;
+  height: 22rpx;
+  background: red;
+  margin-top: 14rpx;
+  margin-left: 5rpx;
+}
+.notice-nb-txt{
+  margin-left: 28rpx;
+}
+.notice-nav-condition{
+  width: 20%;
+  margin: 0 6.5%;
+}
+.notice-nav-arrow{
+  width: 0;
+  border: 8rpx solid transparent;
+  margin-top: 22rpx;
+  border-top-color: #b2b2b2;
+}
+.slide-image{
+  width: 100%;
+}
+.notice-swiper{
+  height: 320rpx;
+}
+
+
+

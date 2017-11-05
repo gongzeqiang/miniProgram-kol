@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view>
+    <view class="head clearfix">
+        <view class="head-ls fl">
+            <view class="head-list clearfix {{nav == 'kol'?'head-list-cur':''}}" data-nav="kol" bindtap="chooseNav">
+                <i class="icon icon-kolList fl"></i>
+                <span class="fl">kol列表</span>    
+            </view>
+        </view>
+        <view class="head-ls fl">
+            <view class="head-list clearfix  {{nav == 'notice'?'head-list-cur':''}}" data-nav="notice" bindtap="chooseNav">
+                <i class="icon icon-noticeList fl"></i>
+                <span class="fl">通告列表</span>
+            </view>
+        </view>
+    </view>
+    <view class="main">
+        <view wx:if="{{nav == 'kol'}}" class="main-ls">
+            <view class="list-wrap clearfix">
+                <view wx:for="[0,1,2,3]" class="list-ls fl"> 
+                    <view class="list-list">                    
+                        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509901413464&di=944fdc8ea45d1104e3876888de23e2e5&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121014%2F240425-12101420050650.jpg"></image>   
+                        <view class="list-ls-bottom">
+                            <view class="list-lbn-wrap clearfix">
+                                <view class="list-lb-name fl">陈金汉</view>
+                                <em class="list-lb-line fl"></em>
+                            </view>
+                            <view class="list-ls-tags clearfix">
+                                <view class="list-ls-tag fl">魅力</view>
+                                <view class="list-ls-tag fl">魅力</view>
+                                <view class="list-ls-tag fl">魅力</view>
+                            </view>
+                            <view class="list-ls-audience clearfix">
+                                <i class="icon icon-focus fl"></i>
+                                <view class="list-ls-audience-txt fl">101.3W</view>
+                                <i class="icon icon-focus fl"></i>
+                                <view class="list-ls-audience-txt fl">101.3W</view>
+                            </view>
+                            <view class="list-ls-num">+27</view>
+                        </view>
+                    </view>
+                </view>
+                
+            </view>
+        </view>
+        <view wx:elif="{{nav == 'notice'}}" class="main-ls">
+            <view class="notice-nav">
+                <view class="notice-nav-conditions fl clearfix">
+                    <view class="notice-nav-condition fl clearfix">
+                        <span class="fl">活动方式</span>
+                        <em class="notice-nav-arrow fr"></em>    
+                    </view>
+                    <view class="notice-nav-condition fl clearfix">
+                        <span class="fl">需求性别</span>
+                        <em class="notice-nav-arrow fr"></em>
+                    </view>
+                    <view class="notice-nav-condition fl clearfix">
+                        <span class="fl">开始时间</span>
+                        <em class="notice-nav-arrow fr"></em>
+                    </view>
+                </view>
+                <view class="notice-nav-btn fr clearfix">
+                    <view class="notice-nb-txt fl">筛选</view>
+                    <i class="icon icon-conditions-btn fl"></i>
+                </view>
+            </view>
+            <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}" class="notice-swiper">
+                <block wx:for="{{imgUrls}}">
+                    <swiper-item>
+                        <image src="{{item}}" class="slide-image"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+
+</view>
