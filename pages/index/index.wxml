@@ -33,7 +33,7 @@
                             <view class="list-ls-audience clearfix">
                                 <i class="icon icon-focus fl"></i>
                                 <view class="list-ls-audience-txt fl">101.3W</view>
-                                <i class="icon icon-focus fl"></i>
+                                <i class="icon icon-people fl"></i>
                                 <view class="list-ls-audience-txt fl">101.3W</view>
                             </view>
                             <view class="list-ls-num">+27</view>
@@ -46,31 +46,47 @@
         <view wx:elif="{{nav == 'notice'}}" class="main-ls">
             <view class="notice-nav">
                 <view class="notice-nav-conditions fl clearfix">
-                    <view class="notice-nav-condition fl clearfix">
-                        <span class="fl">活动方式</span>
+                    <picker bindchange="chooseStyle" value="{{styleIndex}}" range="{{aStyle}}" range-key="value" class="notice-nav-condition fl clearfix">
+                        <span class="fl">{{aStyle[styleIndex].value}}</span>
                         <em class="notice-nav-arrow fr"></em>    
-                    </view>
-                    <view class="notice-nav-condition fl clearfix">
-                        <span class="fl">需求性别</span>
+                    </picker>
+                    <picker bindchange="chooseSex" value="{{sexIndex}}" range="{{aSex}}" range-key="value" class="notice-nav-condition fl clearfix">
+                        <span class="fl">{{aSex[sexIndex].value}}</span>
                         <em class="notice-nav-arrow fr"></em>
-                    </view>
-                    <view class="notice-nav-condition fl clearfix">
-                        <span class="fl">开始时间</span>
-                        <em class="notice-nav-arrow fr"></em>
-                    </view>
+                    </picker>
+                <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="chooseDate" class="notice-nav-condition notice-nc-date fl clearfix">
+                    <span class="fl">{{date}}</span>
+                    <em class="notice-nav-arrow fr"></em>
+                    </picker>
                 </view>
                 <view class="notice-nav-btn fr clearfix">
                     <view class="notice-nb-txt fl">筛选</view>
                     <i class="icon icon-conditions-btn fl"></i>
                 </view>
             </view>
-            <swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{3000}}" duration="{{1000}}" class="notice-swiper">
+            <swiper indicator-dots="{{true}}" circular="true" autoplay="true" interval="3000" duration="1000" indicator-color="#fff" indicator-active-color="#de147f" class="notice-swiper">
                 <block wx:for="{{imgUrls}}">
                     <swiper-item>
                         <image src="{{item}}" class="slide-image"/>
                     </swiper-item>
                 </block>
             </swiper>
+            <view class="notice-main">
+                <view class="notice-ls" wx:for="{{[0,1,2,3]}}">
+                    <view class="notice-ls-imgwrap">
+                        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509901413464&di=944fdc8ea45d1104e3876888de23e2e5&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121014%2F240425-12101420050650.jpg"></image>
+                    </view>
+                    <view class="notice-ls-right">
+                        <view class="notice-ls-top clearfix">
+                            <view class="notice-ls-top-title fl">简单商品自拍照通告简单商品自拍照通告简单商品自拍照通告</view>
+                            <view class="notice-ls-top-more fr">查看详情</view>
+                        </view>
+                        <view>主播网红要求：粉丝不限，拍照好看即可</view>
+                        <view>时间：2017.09.20-2017.10.08</view>
+                        <view>详细地址：北京丰台万达广场</view>
+                    </view>
+                </view>
+            </view>
         </view>
     </view>
 

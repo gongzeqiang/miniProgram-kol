@@ -1,26 +1,33 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/detail/detail",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#f4f2f5",
     "navigationBarTitleText": "星优客",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
     "backgroundColor": "#fff",
-    "selectedColor": "red",
+    "selectedColor": "#de147f",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "kol入驻"
+      "text": "kol入驻",
+      "iconPath": "assets/img/tab-bar1.png",
+      "selectedIconPath": "assets/img/tab-bar1-act.png"
     }, {
       "pagePath": "pages/logs/logs",
-      "text": "发布通告"
+      "text": "发布通告",
+      "iconPath": "assets/img/tab-bar2.png",
+      "selectedIconPath": "assets/img/tab-bar2-act.png"
     }, {
       "pagePath": "pages/logs/logs",
-      "text": "我的"
+      "text": "我的",
+      "iconPath": "assets/img/tab-bar3.png",
+      "selectedIconPath": "assets/img/tab-bar3-act.png"
     }]
   }
 }

@@ -10,4 +10,13 @@
   display: block;
   clear: both;
 }
+.icon{
+  display: block;
+}
 
+.mb-11{
+  margin-bottom: 11rpx;
+}
+.pb-15{
+  padding-bottom: 15rpx;
+}
