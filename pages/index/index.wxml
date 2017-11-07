@@ -54,7 +54,7 @@
                         <span class="fl">{{aSex[sexIndex].value}}</span>
                         <em class="notice-nav-arrow fr"></em>
                     </picker>
-                <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="chooseDate" class="notice-nav-condition notice-nc-date fl clearfix">
+                <picker mode="date" value="{{date}}" start="2015-09-01" end="2019-09-01" bindchange="chooseDate" class="notice-nav-condition notice-nc-date fl clearfix">
                     <span class="fl">{{date}}</span>
                     <em class="notice-nav-arrow fr"></em>
                     </picker>

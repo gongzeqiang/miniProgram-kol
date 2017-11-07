@@ -32,7 +32,7 @@ Page({
       value: '线下活动'
     }],
     sexIndex: 0,
-    date: '2017-05-01'
+    date: '2017-10-11'
   },
   chooseNav: function(e){
     var nav = e.currentTarget.dataset.nav;
