@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/user-info/user-info",
+    "pages/user-info-index/user-info",
     "pages/list-hasbook/list-hasbook",
     "pages/detail/detail",
     "pages/user-info-fixmoney/user-info-fixmoney",
@@ -28,7 +29,7 @@
       "iconPath": "assets/img/tab-bar2.png",
       "selectedIconPath": "assets/img/tab-bar2-act.png"
     }, {
-      "pagePath": "pages/logs/logs",
+      "pagePath": "pages/user-info-index/user-info",
       "text": "我的",
       "iconPath": "assets/img/tab-bar3.png",
       "selectedIconPath": "assets/img/tab-bar3-act.png"
