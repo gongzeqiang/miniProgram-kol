@@ -18,7 +18,7 @@
         <view wx:if="{{nav == 'kol'}}" class="main-ls">
             <view class="list-wrap clearfix">
                 <view wx:for="[0,1,2,3]" class="list-ls fl"> 
-                    <view class="list-list">                    
+                    <navigator url="/pages/user-info/user-info" class="list-list">                    
                         <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509901413464&di=944fdc8ea45d1104e3876888de23e2e5&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121014%2F240425-12101420050650.jpg"></image>   
                         <view class="list-ls-bottom">
                             <view class="list-lbn-wrap clearfix">
@@ -38,7 +38,7 @@
                             </view>
                             <view class="list-ls-num">+27</view>
                         </view>
-                    </view>
+                    </navigator>
                 </view>
                 
             </view>
