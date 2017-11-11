@@ -5,6 +5,7 @@
     "pages/list-hasbook/list-hasbook",
     "pages/detail/detail",
     "pages/user-info-fixmoney/user-info-fixmoney",
+    "pages/first-list/first-list",
     "pages/logs/logs"
   ],
   "window":{
@@ -22,7 +23,7 @@
       "iconPath": "assets/img/tab-bar1.png",
       "selectedIconPath": "assets/img/tab-bar1-act.png"
     }, {
-      "pagePath": "pages/logs/logs",
+      "pagePath": "pages/first-list/first-list",
       "text": "发布通告",
       "iconPath": "assets/img/tab-bar2.png",
       "selectedIconPath": "assets/img/tab-bar2-act.png"

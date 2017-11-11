@@ -1,0 +1,15 @@
+<view class="notice-main">
+    <navigator url="/pages/detail/detail" class="notice-ls" wx:for="{{[0,1,2,3]}}">
+        <view class="notice-ls-imgwrap">
+            <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509901413464&di=944fdc8ea45d1104e3876888de23e2e5&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121014%2F240425-12101420050650.jpg"></image>
+        </view>
+        <view class="notice-ls-right">
+            <view class="notice-ls-top clearfix">
+                <view class="notice-ls-top-title fl">简单商品自拍照通告简单商品自拍照通告简单商品自拍照通告</view>
+            </view>
+            <view>主播网红要求：粉丝不限，拍照好看即可</view>
+            <view>时间：2017.09.20-2017.10.08</view>
+            <view>详细地址：北京丰台万达广场</view>
+        </view>
+    </navigator>
+</view>    

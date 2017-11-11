@@ -26,9 +26,9 @@
     </view>
     <view class="usi-photo">
         <view class="usi-photo-title usi-cm-title clearfix">
-            <view class="usi-cm-title-left fl">照片管理</view>
+            <view class="usi-cm-title-left fl">我的相册</view>
             <view class="usi-cm-title-right fr clearfix">
-                <view class="fl usi-cmtr-txt">修改资料</view>
+                <view class="fl usi-cmtr-txt">照片管理</view>
                 <i class="icon icon-uis-arrow-gray fr"></i>
             </view>
         </view>
@@ -51,9 +51,9 @@
     </view>
     <view class="usi-expe">
         <view class="usi-expe-title usi-cm-title clearfix">
-            <view class="usi-cm-title-left fl">活动管理</view>
+            <view class="usi-cm-title-left fl">活动经历</view>
             <view class="usi-cm-title-right fr clearfix">
-                <view class="fl usi-cmtr-txt">添加经历</view>
+                <view class="fl usi-cmtr-txt">活动管理</view>
                 <i class="icon icon-uis-arrow-gray fr"></i>
             </view>
         </view>
