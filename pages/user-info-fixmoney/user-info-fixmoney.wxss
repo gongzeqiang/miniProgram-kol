@@ -1,0 +1,50 @@
+.usi-act-main{
+    padding: 13rpx 30rpx 140rpx;
+    background: #f3f3f3;
+}
+.usi-act-ls{
+    margin-bottom: 31rpx;
+}
+.usi-act-ls-title{
+    line-height: 40rpx;
+    padding: 20rpx 0;
+}
+.usi-act-ls-mtitle{
+    font-size: 30rpx;
+    color: #333333;
+    margin-right: 30rpx;
+}
+.usi-act-ls-stitle{
+    font-size: 24rpx;
+    color: rgba(0, 0, 0, .6)
+}
+.usi-al-bottom{
+    background: #fff;
+    line-height: 60rpx;
+    padding: 0 18rpx;
+    font-size: 28rpx;
+    color: #9a9a9a;
+}
+.usi-al-money{
+    width: auto;
+    min-width: initial;
+    margin-right: 12rpx;
+}
+.usi-al-bottom-two{
+    width: 42%;
+}
+.usi-al-inp{
+    width: 500rpx;
+}
+.usi-act-ls-twowrap .usi-al-inp{
+    width: 180rpx;
+}
+.uif-sub{
+    margin-top: 80rpx;
+    width: 100%;
+    height: 86rpx;
+    color: #fff;
+    background: #e4007f;
+    text-align: center;
+    line-height: 86rpx;
+}

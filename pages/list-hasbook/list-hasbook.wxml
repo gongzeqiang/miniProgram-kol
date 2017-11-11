@@ -1,0 +1,8 @@
+<view class="lhb">
+    <navigator url="/pages/user-info/user-info" class="lhb-ls clearfix" wx:for="{{[0,0,0,0,0,0,0,0,0,0,0,0,0]}}">
+        <view class="lhb-ls-imgwrap">
+            <image src="../../assets/img/detail-bottom.jpg"></image>
+        </view>
+        <view class="lnb-ls-name">指定是否阻止本</view>
+    </navigator>
+</view>

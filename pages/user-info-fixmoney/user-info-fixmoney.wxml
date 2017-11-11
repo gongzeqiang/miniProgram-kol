@@ -1,0 +1,82 @@
+<view class="usi-act">
+    <view class="usi-act-main">
+        <view class="usi-act-ls">
+            <view class="usi-act-ls-title">
+                <span class="usi-act-ls-mtitle">出席活动</span>
+                <span class="usi-act-ls-stitle">直播</span>
+            </view>
+            <view class="usi-al-bottom clearfix">
+                <input type="number" class="usi-al-inp fl" />
+                <span class="fr">元/场次 </span>
+            </view>
+        </view>
+        <view class="usi-act-ls">
+            <view class="usi-act-ls-title">
+                <span class="usi-act-ls-mtitle">出席活动</span>
+                <span class="usi-act-ls-stitle">不直播</span>
+            </view>
+            <view class="usi-al-bottom clearfix">
+                <input type="number" class="usi-al-inp fl" />
+                <span class="fr">元/场次 </span>
+            </view>
+        </view>
+        <view class="usi-act-ls">
+            <view class="usi-act-ls-title">
+                <span class="usi-act-ls-mtitle">车展大致报价</span>
+            </view>
+            <view class="usi-al-bottom clearfix">
+                <input type="number" class="usi-al-inp fl" />
+                <span class="fr">元/场次 </span>
+            </view>
+        </view>
+        <view class="usi-act-ls">
+            <view class="usi-act-ls-title">
+                <span class="usi-act-ls-mtitle">车展大致报价</span>
+            </view>
+            <view class="usi-act-ls-twowrap clearfix">
+                <view class="usi-al-bottom usi-al-bottom-two fl clearfix">
+                    <input type="number" class="usi-al-inp fl" />
+                    <span class="fr">元/组图 </span>
+                </view>
+                <view class="usi-al-bottom usi-al-bottom-two fr clearfix">
+                    <input type="number" class="usi-al-inp fl" />
+                    <span class="fr">元/天 </span>
+                </view>
+            </view>
+        </view>
+        <view class="usi-act-ls">
+            <view class="usi-act-ls-title">
+                <span class="usi-act-ls-mtitle">拍摄影片大致报价</span>
+            </view>
+            <view class="usi-act-ls-twowrap clearfix">
+                <view class="usi-al-bottom usi-al-bottom-two fl clearfix">
+                    <input type="number" class="usi-al-inp fl" />
+                    <span class="fr">元/组图 </span>
+                </view>
+                <view class="usi-al-bottom usi-al-bottom-two fr clearfix">
+                    <input type="number" class="usi-al-inp fl" />
+                    <span class="fr">元/天 </span>
+                </view>
+            </view>
+        </view>
+        <view class="usi-act-ls">
+            <view class="usi-act-ls-title">
+                <span class="usi-act-ls-mtitle">朋友圈转发宣传广告</span>
+            </view>
+            <view class="usi-al-bottom clearfix">
+                <input type="number" class="usi-al-inp fl" />
+                <span class="fr">元/条 </span>
+            </view>
+        </view>           
+        <view class="usi-act-ls">
+            <view class="usi-act-ls-title">
+                <span class="usi-act-ls-mtitle">微博广告</span>
+            </view>
+            <view class="usi-al-bottom clearfix">
+                <input type="number" class="usi-al-inp fl" />
+                <span class="fr">元/条 </span>
+            </view>
+        </view>  
+        <view class="uif-sub" bindtap="sub">确认修改</view>
+    </view>
+</view>

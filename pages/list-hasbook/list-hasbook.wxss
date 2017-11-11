@@ -1,0 +1,29 @@
+.lhb{
+    padding: 0 30rpx;
+}
+.lhb-ls{
+    display: flex;
+    
+}
+.lhb-ls:first-child .lnb-ls-name {
+    border-top: none;
+}
+.lhb-ls-imgwrap{
+    margin-top: 20rpx;
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20rpx;
+}
+.lhb-ls-imgwrap > image{
+    width: 100%;
+    height: 100%;
+}
+.lnb-ls-name{
+    flex: 1;
+    font-size: 36rpx;
+    padding: 32rpx 0;
+    line-height: 48rpx;
+    border-top: 2rpx solid #ccc;
+}

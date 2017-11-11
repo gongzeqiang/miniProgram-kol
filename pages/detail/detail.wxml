@@ -63,10 +63,12 @@
     </view>
     <view class="detail-book bg-white">
         <view class="detail-book-top clearfix">
-<i class="icon icon-hasbook fl"></i>
+            <i class="icon icon-hasbook fl"></i>
             <view class="fl">已报名</view>
-            <i class="icon icon-tolist fr"></i>
-            <view class="fr">300人</view>
+            <navigator url="/pages/list-hasbook/list-hasbook" class="clearfix fr">
+                <i class="icon icon-tolist fr"></i>
+                <view class="fr">300人</view>
+            </navigator>
         </view>
         <scroll-view scroll-x class="clearfix detail-scroll" height="72">
             <view class="scroll-view-item" wx:for="{{[0,1,2,3,4,5,6,7,8,9,10,11,1,1,1,1]}}">
