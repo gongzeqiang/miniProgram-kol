@@ -1,0 +1,38 @@
+<view class="my">
+    <button class="my-head" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+        <view class="my-head-imgwrap"></view>
+        <view class="my-head-name">未登录</view>
+    </button>
+    <button class="my-head" wx:else bindtap="toLogin">
+        <view class="my-head-imgwrap">
+            <image src="{{userInfo.avatarUrl}}"></image>
+        </view>
+        <view class="my-head-name">{{userInfo.nickName}}</view>
+    </button>
+    <view class="my-main">
+        <navigator url="/pages/photos-list/photos-list" class="my-ls">
+            <view class="my-list clearfix">
+                <i class="icon icon-my-cm icon-my-photos fl"></i>
+                <view class="my-list-title fl">相册</view>
+            </view>
+        </navigator>
+        <navigator class="my-ls">
+            <view class="my-list clearfix">
+                <i class="icon icon-my-cm icon-my-mission fl"></i>
+                <view class="my-list-title fl">任务</view>
+            </view>
+        </navigator>
+        <navigator class="my-ls">
+            <view class="my-list clearfix">
+                <i class="icon icon-my-cm icon-my-kol fl"></i>
+                <view class="my-list-title fl">Kol入驻</view>
+            </view>
+        </navigator>
+        <navigator class="my-ls">
+            <view class="my-list clearfix">
+                <i class="icon icon-my-cm icon-my-goden fl"></i>
+                <view class="my-list-title fl">认证为金主</view>
+            </view>
+        </navigator>
+    </view>
+</view>

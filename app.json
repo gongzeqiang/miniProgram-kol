@@ -1,8 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/photos-list/photos-list",
+    "pages/my/my",
     "pages/user-info/user-info",
-    "pages/user-info-index/user-info",
     "pages/list-hasbook/list-hasbook",
     "pages/detail/detail",
     "pages/user-info-fixmoney/user-info-fixmoney",
@@ -20,16 +21,16 @@
     "selectedColor": "#de147f",
     "list": [{
       "pagePath": "pages/index/index",
-      "text": "kol入驻",
+      "text": "首页",
       "iconPath": "assets/img/tab-bar1.png",
       "selectedIconPath": "assets/img/tab-bar1-act.png"
     }, {
       "pagePath": "pages/first-list/first-list",
-      "text": "发布通告",
+      "text": "发布任务",
       "iconPath": "assets/img/tab-bar2.png",
       "selectedIconPath": "assets/img/tab-bar2-act.png"
     }, {
-      "pagePath": "pages/user-info-index/user-info",
+      "pagePath": "pages/my/my",
       "text": "我的",
       "iconPath": "assets/img/tab-bar3.png",
       "selectedIconPath": "assets/img/tab-bar3-act.png"
