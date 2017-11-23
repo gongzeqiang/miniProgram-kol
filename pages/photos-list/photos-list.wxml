@@ -1,10 +1,17 @@
 <view class="phl">
     <view class="phl-main">
         <view class="phl-body clearfix">
-            <view class="phl-ls fl" wx:for="{{[0,0,0,0,0,0,0,0,0,0,0]}}">
+            <view class="phl-ls fl" wx:for="{{aPic}}">
                 <view class="phl-list">
                     <view class="phl-item">
-                        <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509901413464&di=944fdc8ea45d1104e3876888de23e2e5&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121014%2F240425-12101420050650.jpg"></image>
+                        <image src="{{item.src}}" data-id="{{item.id}}" bindtap="toBigPic" bindlongpress="delpic"></image>
+                    </view>
+                </view>
+            </view>
+            <view class="phl-ls fl">
+                <view class="phl-list">
+                    <view class="phl-item phl-add" bindtap="choosePic">
+                        <i class="icon icon-usi-plus"></i>
                     </view>
                 </view>
             </view>
