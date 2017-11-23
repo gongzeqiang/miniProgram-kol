@@ -11,7 +11,7 @@
     </button>
     <view class="my-main">
         <navigator url="/pages/photos-list/photos-list" class="my-ls">
-            <view class="my-list clearfix">
+            <view class="my-list my-list-nbt clearfix">
                 <i class="icon icon-my-cm icon-my-photos fl"></i>
                 <view class="my-list-title fl">相册</view>
             </view>
@@ -34,5 +34,11 @@
                 <view class="my-list-title fl">认证为金主</view>
             </view>
         </navigator>
+        <view bindtap="isMoka" class="my-ls my-ls-moka">
+            <view class="my-list my-list-nbt clearfix">
+                <i class="icon icon-my-cm icon-my-moka fl"></i>
+                <view class="my-list-title fl">制作模卡</view>
+            </view>
+        </view>
     </view>
 </view>
