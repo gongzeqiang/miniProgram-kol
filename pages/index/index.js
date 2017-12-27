@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+import getKolList from "../../action/get-kolList";
+
 Page({
   data: {
     nav: 'notice',
@@ -54,5 +56,13 @@ Page({
     this.setData({
       date: e.detail.value
     })
+  },
+  onLoad () {
+    getKolList().then((res) => {
+        console.log(res)
+    }).catch(() => {
+        console.log(222)
+    });
+      
   }
 })
