@@ -1,10 +1,10 @@
 import {DOMAIN} from '../config/config.js';
 
-const path = '/netred/paginate';
+const path = '/netred/detail';
 
 const url = DOMAIN + path;
 
-function getKolList (data) {
+function getKolDetail (data) {
     return new Promise(function (resolve, reject) {
         wx.request({
             url: url,
@@ -19,5 +19,5 @@ function getKolList (data) {
     });
 }
 
-export default getKolList;
+export default getKolDetail;
 

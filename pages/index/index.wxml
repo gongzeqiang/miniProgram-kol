@@ -17,30 +17,29 @@
     <view class="main">
         <view wx:if="{{nav == 'kol'}}" class="main-ls">
             <view class="list-wrap clearfix">
-                <view wx:for="[0,1,2,3]" class="list-ls fl"> 
-                    <navigator url="/pages/user-info/user-info" class="list-list">                    
+                <view wx:for="{{kol.list}}" class="list-ls fl" wx:key="a{{index}}"> 
+                    <navigator url="/pages/user-info/user-info?id={{item.star_id}}" class="list-list">                    
                         <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1509901413464&di=944fdc8ea45d1104e3876888de23e2e5&imgtype=0&src=http%3A%2F%2Fimg.taopic.com%2Fuploads%2Fallimg%2F121014%2F240425-12101420050650.jpg"></image>   
                         <view class="list-ls-bottom">
                             <view class="list-lbn-wrap clearfix">
-                                <view class="list-lb-name fl">陈金汉</view>
+                                <view class="list-lb-name fl">{{item.star_name}}</view>
                                 <em class="list-lb-line fl"></em>
                             </view>
                             <view class="list-ls-tags clearfix">
-                                <view class="list-ls-tag fl">魅力</view>
-                                <view class="list-ls-tag fl">魅力</view>
-                                <view class="list-ls-tag fl">魅力</view>
+                                <view class="list-ls-tag fl" wx:for="{{item.field}}" wx:for-item="ls" wx:key="aa{{index}}">{{ls}}</view> 
                             </view>
                             <view class="list-ls-audience clearfix">
                                 <i class="icon icon-focus fl"></i>
-                                <view class="list-ls-audience-txt fl">101.3W</view>
+                                <view class="list-ls-audience-txt fl">110W</view>
                                 <i class="icon icon-people fl"></i>
-                                <view class="list-ls-audience-txt fl">101.3W</view>
+                                <view class="list-ls-audience-txt fl">27W</view>
                             </view>
-                            <view class="list-ls-num">+27</view>
+                            <view class="list-ls-num">+{{item.star_indexhot!=null?item.star_indexhot:'1'}}</view>
                         </view>
                     </navigator>
                 </view>
-                
+                <view class="loading" wx:if="{{isLoadingKol=='load'}}">正在加载中...</view>
+                <view class="loading" wx:elif="{{isLoadingKol=='over'}}">没有更多了</view>
             </view>
         </view>
         <view wx:elif="{{nav == 'notice'}}" class="main-ls">

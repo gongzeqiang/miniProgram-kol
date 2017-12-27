@@ -6,20 +6,20 @@
             <view class="usi-header-imgwrap">
                 <image src="http://img0.imgtn.bdimg.com/it/u=511139256,2968373034&fm=27&gp=0.jpg" class="all-wh"></image>
             </view>
-            <view class="usi-header-name">李晨明月</view>
+            <view class="usi-header-name">{{info.star_name}}</view>
             <view class="usi-header-address">
                 <i class="icon icon-usi-address"></i>
-                <view class="usi-header-address-txt">北京，中国</view>
+                <view class="usi-header-address-txt">{{info.star_location}}</view>
             </view>
             <view class="usi-header-school">
                 <i class="icon icon-usi-school"></i>
-                <view class="usi-header-school-txt">北京戏剧学院</view>
+                <view class="usi-header-school-txt">{{info.star_college}}</view>
             </view>
         </view>
         <view class="usi-header-bottom clearfix">
-            <view class="usi-hb-ls fl">173cm/50kg</view>
+            <view class="usi-hb-ls fl">{{info.star_height}}cm/{{info.star_weight}}kg</view>
             <view class="usi-hb-ls usi-hb-right  fl clearfix">
-                <view class="fl">学生/模特/作家</view>
+                <view class="fl">{{info.profession}}</view>
                 <navigator class="usi-hbr-more fr">更多</navigator>   
             </view>
         </view>
@@ -35,7 +35,7 @@
         <view class="uis-photo-main">
             <view class="uis-photo-main-wrap">
                 <view class="uis-photo-body clearfix">
-                    <view class="uis-photo-ls fl" wx:for="{{[0,0,0,0,0]}}">
+                    <view class="uis-photo-ls fl" wx:for="{{[0,0,0,0,0]}}" wx:key="a{{index}}">
                         <view class="uis-photo-ls-imgwrap">
                             <image src="http://img5.imgtn.bdimg.com/it/u=3456403917,3492521682&fm=27&gp=0.jpg" class="all-wh"></image>
                         </view>
@@ -60,7 +60,7 @@
         <view class="uis-photo-main">
             <view class="uis-photo-main-wrap">
                 <view class="uis-photo-body clearfix">
-                    <view class="uis-photo-ls fl" wx:for="{{[0,0,0,0,0]}}">
+                    <view class="uis-photo-ls fl" wx:for="{{[0,0,0,0,0]}}" wx:key="b{{index}}">
                         <view class="uis-expe-ls">
                             <view class="uis-expe-ls-imgwrap">
                                 <image src="http://img2.imgtn.bdimg.com/it/u=3531992860,2768824436&fm=27&gp=0.jpg" class="all-wh"></image>
@@ -135,7 +135,7 @@
                     <view class="usi-data-item4 fl">平均在线观看</view>
                     <view class="usi-data-item5 fl">平均阅读量</view>
                 </view>
-                <view class="usi-data-ls clearfix" wx:for="{{[0,0,0,0]}}">
+                <view class="usi-data-ls clearfix" wx:for="{{[0,0,0,0]}}" wx:key="c{{index}}">
                     <view class="usi-data-item1 fl">花椒</view>
                     <view class="usi-data-item2 fl">12222222</view>
                     <view class="usi-data-item3 fl">20W</view>
