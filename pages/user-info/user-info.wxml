@@ -87,24 +87,20 @@
             <view class="usi-cm-title usi-info-ls clearfix">
                 <view class="usi-cm-title-left fl">特长爱好</view>
                 <view class="usi-cm-title-right fr clearfix">
-                    <view class="usi-info-habit bg-blue fl">唱歌</view>
-                    <view class="usi-info-habit bg-pink fl">书法</view>
+                    <view class="usi-info-habit {{i%2 == 0?'bg-blue':'bg-pink'}}  fl" wx:for="{{info.hobby}}" wx:for-item="ls" wx:for-index="i">{{ls}}</view>
                 </view>
             </view>
             <view class="usi-cm-title usi-info-ls clearfix">
                 <view class="usi-cm-title-left fl">风格标签</view>
                 <view class="usi-cm-title-right usi-info-tags fr clearfix">
-                    <view class="usi-info-tag bg-blue fl">唱歌</view>
-                    <view class="usi-info-tag bg-pink fl">书法</view>
+                    <view class="usi-info-tag {{i%2 == 0?'bg-blue':'bg-pink'}} fl" wx:for="{{info.style}}" wx:for-item="ls" wx:for-index="i">{{ls}}</view>
                 </view>
             </view>
             <view class="usi-cm-title usi-info-ls clearfix">
                 <view class="usi-cm-title-left fl">擅长领域</view>
                 <view class="usi-cm-title-right fr clearfix">
                     <view class="fl clearfix">
-                        <view class="usi-info-ls-sc fl">时尚</view>
-                        <view class="usi-info-ls-sc fl">美妆</view>
-                        <view class="usi-info-ls-sc fl">服装</view>
+                        <view class="usi-info-ls-sc fl" wx:for="{{info.field}}" wx:for-item="ls" wx:for-index="i">{{ls}}</view>
                     </view>
                     <i class="icon icon-uis-arrow fr"></i>
                 </view>
@@ -118,7 +114,7 @@
             </view>
             <view class="usi-info-info">
                 <view class="usi-info-info-title">才艺简介</view>
-                <view class="usi-info-info-content">歌手，青年双排键演奏家，中国首位双排键电子管风琴艺术硕士，英国国际电子管风琴公开赛亚军。</view>
+                <view class="usi-info-info-content">{{info.star_rewards}}</view>
             </view>
         </view>
     </view>

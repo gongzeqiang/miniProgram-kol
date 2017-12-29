@@ -2,53 +2,53 @@
     <image src="../../assets/img/detail-top.jpg" class="detail-topimg"></image>
     <view class="bg-white pb-15">
         <view class="detail-main">
-            <view class="detail-title">简单商品自拍照通告简单商品自拍照通告简单商品自拍照通告</view>
+            <view class="detail-title">{{info.anno_name}}</view>
             <view class="detail-content">
                 <view class="detail-content-ls">
                     <i class="icon icon-c-cm icon-c-cm-date"></i>
                     <view class="detail-cl-title">时间:</view>
-                    <view class="detail-cl-content">2017.09.20-2017.10.08</view>
+                    <view class="detail-cl-content">{{info.anno_startworktime}} - {{info.anno_endworktime}}</view>
                 </view>
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-address"></i>
                     <view class="detail-cl-title">地点:</view>
-                    <view class="detail-cl-content">开发者可以将页面内的功能模块抽象成自定义组件，以便在不同的页面中重复使用；也可以将</view>
+                    <view class="detail-cl-content">{{info.anno_city}}</view>
                 </view>
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-dtladdress"></i>
                     <view class="detail-cl-title">详细地址:</view>
-                    <view class="detail-cl-content">2017.09.20-2017.10.08</view>
+                    <view class="detail-cl-content">{{info.anno_location}}</view>
                 </view>
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-money"></i>
                     <view class="detail-cl-title">报酬:</view>
-                    <view class="detail-cl-content">2017.09.20-2017.10.08</view>
+                    <view class="detail-cl-content">{{info.anno_pay}}</view>
                 </view>
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-sex"></i>
                     <view class="detail-cl-title">性别:</view>
-                    <view class="detail-cl-content">女</view>
+                    <view class="detail-cl-content">{{info.anno_star_sex}}</view>
                     <i class="icon icon-c-cm icon-c-cm-people"></i>
                     <view class="detail-cl-title">需要人数:</view>
-                    <view class="detail-cl-content">20</view>
+                    <view class="detail-cl-content">{{info.anno_starnumber}}</view>
 <i class="icon icon-c-cm icon-c-cm-time"></i>
                     <view class="detail-cl-title">时长:</view>
-                    <view class="detail-cl-content">1小时</view>
+                    <view class="detail-cl-content">{{info.anno_activityneedtime}}</view>
                 </view>
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-request"></i>
                     <view class="detail-cl-title">主播网红要求:</view>
-                    <view class="detail-cl-content">2017.09.20-2017.10.08</view>
+                    <view class="detail-cl-content">{{info.anno_starrequire}}</view>
                 </view>
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-style"></i>
                     <view class="detail-cl-title">活动方式:</view>
-                    <view class="detail-cl-content">2017.09.20-2017.10.08</view>
+                    <view class="detail-cl-content">{{info.anno_online}}</view>
                 </view>
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-type"></i>
                     <view class="detail-cl-title">通告类型:</view>
-                    <view class="detail-cl-content">2017.09.20-2017.10.08</view>
+                    <view class="detail-cl-content">1111</view>
                 </view>
             </view>
             <image src="../../assets/img/detail-bottom.jpg" class="detail-topimg"></image>
@@ -56,7 +56,7 @@
                 <view class="detail-content-ls">
 <i class="icon icon-c-cm icon-c-cm-content"></i>
                     <view class="detail-cl-title">活动内容:</view>
-                    <view class="detail-cl-content">给每人t费寄一份眼贴，休息时体验一次眼 贴，摆好让人帮忙拍照或者自拍也行，之后 上交几张照片即可 费用：要求简单，费用不高，赠送眼贴产品</view>
+                    <view class="detail-cl-content">{{info.anno_content}}</view>
                 </view>
             </view>
         </view>

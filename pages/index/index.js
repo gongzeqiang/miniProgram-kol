@@ -1,18 +1,23 @@
-//index.js
-//获取应用实例
-const app = getApp()
-
 import getKolList from "../../action/get-kolList";
+import getNoticeList from '../../action/get-NoticeList';
+
+const app = getApp()
 
 Page({
     data: {
-        nav: 'kol',
+        nav: 'notice',
         kol: {
             pageNumber: 1,
             pageSize: 10,
             list: []
         },
+        notice: {
+            pageNumber: 1,
+            pageSize: 10,
+            list: []
+        },
         isLoadingKol: '',
+        isLoadingNotice: '',
         imgUrls: [
             'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
             'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
@@ -63,12 +68,17 @@ Page({
     },
     onReady () {
         let kol = this.data.kol;
-        let data = {
+        let notice = this.data.notice;
+        let kolData = {
             pageNumber: kol.pageNumber,
             pageSize: kol.pageSize
         };
+        let noticeData = {
+            pageNumber: notice.pageNumber,
+            pageSize: notice.pageSize
+        };
 
-        getKolList(data).then((res) => {
+        getKolList(kolData).then((res) => {
             kol.list = res.list;
             kol.list.forEach(el => {
             el.field = el.star_field.split(' ').slice(0,3);
@@ -78,58 +88,114 @@ Page({
             console.log(e);
         });
         
+        getNoticeList(noticeData).then((res) => {
+            console.log(res);
+            notice.list = res.list;
+            this.setData({notice});
+        }).catch(() => {
+            console.log(e);
+        })
+
     },
     onReachBottom () {
-        let kol = this.data.kol;
-        kol.pageNumber++;
-        let data = {
-            pageNumber: kol.pageNumber,
-            pageSize: kol.pageSize
-        };
-        let that = this;
-        this.setData({
-            isLoadingKol: 'load'
-        });
-        wx.showLoading({
-            title: '正在加载中',
-            success () {
-                getKolList(data).then((res) => {
-                    if (res.list.length != 0) {
 
-                        res.list.forEach((el, i) => {
-                            if(el.star_field != null){
-                                el.field = el.star_field.split(' ').slice(0,3);
-                            }else{
-                                el.field = [];
-                            }
-                        });
-                        kol.list = [...kol.list, ...res.list];
+        if (this.data.nav == 'kol') {
+            let kol = this.data.kol;
+            kol.pageNumber++;
+            let data = {
+                pageNumber: kol.pageNumber,
+                pageSize: kol.pageSize
+            };
+            let that = this;
+            this.setData({
+                isLoadingKol: 'load'
+            });
+            wx.showLoading({
+                title: '正在加载中',
+                success () {
+                    getKolList(data).then((res) => {
+                        if (res.list.length != 0) {
 
-                        that.setData({
-                            kol,
-                            isLoadingKol: ''
-                        });
-                    } else {
+                            res.list.forEach((el, i) => {
+                                if(el.star_field != null){
+                                    el.field = el.star_field.split(' ').slice(0,3);
+                                }else{
+                                    el.field = [];
+                                }
+                            });
+                            kol.list = [...kol.list, ...res.list];
 
+                            that.setData({
+                                kol,
+                                isLoadingKol: ''
+                            });
+                        } else {
+
+                            that.setData({
+                                kol,
+                                isLoadingKol: 'over'
+                            });
+
+                        }
+
+                        wx.hideLoading();
+
+                    }).catch((e) => {
+
+                        console.log(e);
                         that.setData({
                             kol,
                             isLoadingKol: 'over'
                         });
-
-                    }
-
-                    wx.hideLoading();
-
-                }).catch((e) => {
-
-                    console.log(e);
-                    that.setData({
-                        kol,
-                        isLoadingKol: 'over'
+                        wx.hideLoading();
                     });
-                    wx.hideLoading();
-                });
-            }
-        })
+                }
+            });
+        } else {
+            let notice = this.data.notice;
+            notice.pageNumber++;
+            let data = {
+                pageNumber: notice.pageNumber,
+                pageSize: notice.pageSize
+            };
+            let that = this;
+            this.setData({
+                isLoadingNotice: 'load'
+            });
+            wx.showLoading({
+                title: '正在加载中',
+                success () {
+                    getNoticeList(data).then((res) => {
+                        if (res.list.length != 0) {
+                            
+                            notice.list = [...notice.list, ...res.list];
+                            that.setData({
+                                notice,
+                                isLoadingNotice: ''
+                            });
+                        } else {
+
+                            that.setData({
+                                notice,
+                                isLoadingNotice: 'over'
+                            });
+
+                        }
+
+                        wx.hideLoading();
+
+                    }).catch((e) => {
+
+                        console.log(e);
+                        that.setData({
+                            notice,
+                            isLoadingKol: 'over'
+                        });
+                        wx.hideLoading();
+                    });
+                }
+            });
+        }
+
     }
 })

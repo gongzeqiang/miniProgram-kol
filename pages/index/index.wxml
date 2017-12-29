@@ -64,36 +64,36 @@
                 </view>
             </view>
             <swiper indicator-dots="{{true}}" circular="true" autoplay="true" interval="3000" duration="1000" indicator-color="#fff" indicator-active-color="#de147f" class="notice-swiper">
-                <block wx:for="{{imgUrls}}">
+                <block wx:for="{{imgUrls}}" wx:key="a{{index}}">
                     <swiper-item>
                         <image src="{{item}}" class="slide-image"/>
                     </swiper-item>
                 </block>
             </swiper>
             <view class="notice-main">
-                <view class="notice-nls" wx:for="{{[0,1,2]}}">
-                    <navigator url="/pages/detail/detail" class="notice-nlist">
+                <view class="notice-nls" wx:for="{{notice.list}}" wx:key="b{{index}}">
+                    <navigator url="/pages/detail/detail?annoID={{item.anno_id}}" class="notice-nlist">
                         <view class="notice-nlist-top notice-nlist-cm clearfix">
-                            <view class="notice-nlist-title fl">简单商品自拍照通告简单商品自拍照通告简单商品自拍照通告</view>
-                            <view class="notice-nlist-money fr">1000<span class="notice-nlist-money-s">/天</span></view>
+                            <view class="notice-nlist-title fl">{{item.anno_name}}</view>
+                            <view class="notice-nlist-money fr">{{item.anno_pay}}<span class="notice-nlist-money-s">/天</span></view>
                         </view>
                         <view class="notice-nlist-second notice-nlist-cm clearfix">
                             <i class="icon icon-c-cm icon-c-date fl"></i>
-                            <view class="fl">2016.12~2016.12.20</view>
+                            <view class="fl">{{item.anno_startworktime}} ~ {{item.anno_endworktime}}</view>
                             <i class="icon icon-c-cm icon-hasbook fl"></i>
-                            <view class="fl">3小时</view>
+                            <view class="fl">{{item.anno_activityneedtime}}</view>
                         </view>
                         <view class="notice-nlist-third notice-nlist-cm clearfix">
                             <i class="icon icon-c-cm icon-c-address fl"></i>
-                            <view class="fl">上海</view>
+                            <view class="fl">{{item.anno_city}}</view>
                             <i class="icon icon-c-cm icon-c-people fl"></i>
-                            <view class="fl">2</view>
+                            <view class="fl">{{item.anno_starnumber}}</view>
                             <i class="icon icon-c-cm icon-c-sex fl"></i>
                             <view class="fl">不限</view>
                         </view>
                         <view class="notice-nlist-cm">
                             <view class="notice-nlc-left">活动内容:</view>
-                            <view class="notice-nlc-right">简单商品自拍照通告简单商品自拍照通告简单商品自拍照通告</view>
+                            <view class="notice-nlc-right">{{item.anno_content}}</view>
                         </view>
                         <view class="notice-nlist-cm">
                             <view class="notice-nlc-left">更多照片:</view>
@@ -109,6 +109,8 @@
                     <navigator class="notice-tobook">一键抢单</navigator>
                 </view>
             </view>
+            <view class="loading" wx:if="{{isLoadingNotice=='load'}}">正在加载中...</view>
+            <view class="loading" wx:elif="{{isLoadingNotice=='over'}}">没有更多了</view>
         </view>
     </view>
 
